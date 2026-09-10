@@ -1,4 +1,4 @@
-package cstjean.mobile.pion;
+package cstjean.mobile.jeu;
 
 public class Pion {
     private final String couleur;

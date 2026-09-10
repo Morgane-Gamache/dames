@@ -1,4 +1,4 @@
-package cstjean.mobile.pion;
+package cstjean.mobile.jeu;
 import junit.framework.TestCase;
 public class TestPion extends TestCase {
     public void testCreer() {
