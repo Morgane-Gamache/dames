@@ -9,7 +9,7 @@ import junit.framework.TestCase;
  */
 
 public class TestPion extends TestCase {
-    /**  Teste la créaton de pions.*/
+    /**  Teste la création de pions.*/
     public void testCreer() {
         Pion pionA = new Pion("blanc");
         Pion pionB = new Pion("noir");

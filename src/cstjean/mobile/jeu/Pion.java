@@ -11,7 +11,7 @@ public class Pion {
 
     /**  Crée un pion ayant une couleur blanche comme couleur par défaut.*/
     public Pion() {
-        this.couleur = "blanc";
+        this("blanc");
     }
 
     /**

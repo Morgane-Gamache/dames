@@ -9,14 +9,34 @@ import junit.framework.TestCase;
  */
 
 public class TestDamier extends TestCase {
-    /**  Teste l'ajout de pions à un damier..*/
+
+    /**  Le damier utilisé pour les tests.*/
+    private Damier damier;
+
+    /**  Crée un nouveau damier avant chaque test.*/
+    public void setUp() {
+        damier = new Damier();
+    }
+
+    /**  Teste qu'un damier est vide au départ.*/
+    public void testDamierVide() {
+        assertEquals(0, damier.getNombrePions());
+        assertNull(damier.getPion(1));
+        assertNull(damier.getPion(50));
+    }
+
+    /**  Teste l'ajout de pions à un damier.*/
     public void testAjouterPion() {
-        Damier damier = new Damier();
-        Pion pionA = new Pion();
         Pion pionB = new Pion("noir");
         damier.ajouterPion(3, pionB);
+        assertEquals(1, damier.getNombrePions());
+        assertEquals(pionB, damier.getPion(3));
         assertEquals("noir", damier.getPion(3).getCouleur());
+
+        Pion pionA = new Pion();
         damier.ajouterPion(2, pionA);
+        assertEquals(2, damier.getNombrePions());
+        assertEquals(pionA, damier.getPion(2));
         assertEquals("blanc", damier.getPion(2).getCouleur());
     }
 }
