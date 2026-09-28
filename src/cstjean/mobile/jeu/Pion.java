@@ -5,21 +5,32 @@ package cstjean.mobile.jeu;
  *
  * @author Morgane Gamache, Ian LeBlanc
  */
+
 public class Pion {
     /**  La couleur du pion.*/
-    private final String couleur;
-
-    /**  Crée un pion ayant une couleur blanche comme couleur par défaut.*/
-    public Pion() {
-        this("blanc");
+    public enum Couleur {
+        /** La couleur du pion blanc.*/
+        BLANC,
+        /** La couleur du pion noir.*/
+        NOIR
     }
 
     /**
-     * Crée un pion n'ayant pas de couleur par défaut.
+     * La couleur du pion.
+     * */
+    private final Couleur couleur;
+
+    /**  Crée un pion ayant une couleur blanche comme couleur par défaut.*/
+    public Pion() {
+        this(Couleur.BLANC);
+    }
+
+    /**
+     * Crée un pion de la couleur donnée.
      *
      * @param couleur La couleur du pion.
      */
-    public Pion(String couleur) {
+    public Pion(Couleur couleur) {
         this.couleur = couleur;
     }
 
@@ -28,7 +39,7 @@ public class Pion {
      *
      * @return La couleur du pion.
      */
-    public String getCouleur() {
+    public Couleur getCouleur() {
         return couleur;
     }
 }

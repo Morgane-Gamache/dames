@@ -11,11 +11,11 @@ import junit.framework.TestCase;
 public class TestPion extends TestCase {
     /**  Teste la création de pions.*/
     public void testCreer() {
-        Pion pionA = new Pion("blanc");
-        Pion pionB = new Pion("noir");
+        Pion pionA = new Pion(Pion.Couleur.BLANC);
+        Pion pionB = new Pion(Pion.Couleur.NOIR);
         Pion pionC = new Pion();
-        assertEquals("blanc", pionA.getCouleur());
-        assertEquals("noir", pionB.getCouleur());
-        assertEquals("blanc", pionC.getCouleur());
+        assertEquals(Pion.Couleur.BLANC, pionA.getCouleur());
+        assertEquals(Pion.Couleur.NOIR, pionB.getCouleur());
+        assertEquals(Pion.Couleur.BLANC, pionC.getCouleur());
     }
 }

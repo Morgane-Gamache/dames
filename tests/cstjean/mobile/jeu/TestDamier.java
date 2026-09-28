@@ -27,16 +27,16 @@ public class TestDamier extends TestCase {
 
     /**  Teste l'ajout de pions à un damier.*/
     public void testAjouterPion() {
-        Pion pionB = new Pion("noir");
+        Pion pionB = new Pion(Pion.Couleur.NOIR);
         damier.ajouterPion(3, pionB);
         assertEquals(1, damier.getNombrePions());
         assertEquals(pionB, damier.getPion(3));
-        assertEquals("noir", damier.getPion(3).getCouleur());
+        assertEquals(Pion.Couleur.NOIR, damier.getPion(3).getCouleur());
 
         Pion pionA = new Pion();
         damier.ajouterPion(2, pionA);
         assertEquals(2, damier.getNombrePions());
         assertEquals(pionA, damier.getPion(2));
-        assertEquals("blanc", damier.getPion(2).getCouleur());
+        assertEquals(Pion.Couleur.BLANC, damier.getPion(2).getCouleur());
     }
 }

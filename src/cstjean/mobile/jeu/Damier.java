@@ -25,7 +25,7 @@ public class Damier {
     }
 
     /**
-     * Ajoute un pion sur le damier (dans la liste pion) à une position précise.
+     * Ajoute un pion sur le damier (dans la liste pions) à une position précise.
      *
      * @param index La position où l'on veut ajouter un pion.
      * @param pion Le pion que l'on veut placer sur le damier.
@@ -39,7 +39,7 @@ public class Damier {
      * Cherche le pion se trouvant à un emplacement précis.
      *
      * @param index La position où l'on veut prendre un pion.
-     * @return Un pion.
+     * @return Le pion ou null.
      */
     public Pion getPion(int index) {
         index--;
