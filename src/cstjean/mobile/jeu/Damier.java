@@ -61,4 +61,15 @@ public class Damier {
         }
         return nombrePions;
     }
+
+    public void initialiser() {
+        pions.forEach((index, pion) -> {
+            if (pion != null) {
+                pion.getRepresentation().charValue();
+            }
+        });
+        for (int i = 0; i < 40; i++) {
+            pions
+        }
+    }
 }
