@@ -10,7 +10,7 @@ import junit.framework.TestSuite;
  */
 public class TestComplet {
     /**  Retourne une suite de tests.
-     *
+     *git
      * @return La suite contenant les tests.
      *
      * */

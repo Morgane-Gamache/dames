@@ -42,4 +42,17 @@ public class Pion {
     public Couleur getCouleur() {
         return couleur;
     }
+
+    /**
+     * Récupère la représentation du pion.
+     *
+     * @return La représentation du pion.
+     */
+    public Character getRepresentation() {
+        if (couleur == Couleur.BLANC) {
+            return 'p';
+        } else {
+            return 'P';
+        }
+    }
 }
