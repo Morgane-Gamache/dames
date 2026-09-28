@@ -1,6 +1,7 @@
 package cstjean.mobile.jeu;
 
-import java.util.LinkedList;
+import com.sun.source.tree.Tree;
+import java.util.TreeMap;
 
 /**
  * Damier pour jouer aux dames.
@@ -14,14 +15,14 @@ public class Damier {
     private static final int NB_CASES = 50;
 
     /**  Liste contenant les pions qui sont sur le damier.*/
-    private final LinkedList<Pion> pions;
+    private final TreeMap<Integer, Pion> pions;
 
     /**  Crée un damier avec une liste de 50 positions vides (null).*/
     public Damier() {
-        this.pions = new LinkedList<>();
-        for (int i = 0; i < NB_CASES; i++) {
-            pions.add(null);
-        }
+        this.pions = new TreeMap<>();
+        //for (int i = 0; i < NB_CASES; i++) {
+          //  pions.put(null, null);
+        //}
     }
 
     /**
@@ -31,8 +32,8 @@ public class Damier {
      * @param pion Le pion que l'on veut placer sur le damier.
      */
     public void ajouterPion(int index, Pion pion) {
-        index--;
-        pions.set(index, pion);
+        //index--;
+        pions.put(index, pion);
     }
 
     /**
@@ -42,7 +43,7 @@ public class Damier {
      * @return Le pion ou null.
      */
     public Pion getPion(int index) {
-        index--;
+        //index--;
         return pions.get(index);
     }
 
@@ -53,7 +54,7 @@ public class Damier {
      */
     public int getNombrePions() {
         int nombrePions = 0;
-        for (Pion pion : pions) {
+        for (Pion pion : pions.values()) {
             if (pion != null) {
                 nombrePions++;
             }
