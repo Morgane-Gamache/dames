@@ -39,4 +39,10 @@ public class TestDamier extends TestCase {
         assertEquals(pionA, damier.getPion(2));
         assertEquals(Pion.Couleur.BLANC, damier.getPion(2).getCouleur());
     }
+
+    public void testInitialiser() {
+        assertEquals(0, damier.getNombrePions());
+        damier.initialiser();
+        assertEquals(40, damier.getNombrePions());
+    }
 }

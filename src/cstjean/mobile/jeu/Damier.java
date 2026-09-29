@@ -62,14 +62,21 @@ public class Damier {
         return nombrePions;
     }
 
+    /**
+     * Ajoute les pions au damier. Les cases null serviront pour l'affichage.
+     */
+
     public void initialiser() {
-        pions.forEach((index, pion) -> {
-            if (pion != null) {
-                pion.getRepresentation().charValue();
+        for (int i = 1; i <= 50; i++) {
+            if (i <= 20) {
+                ajouterPion(i, new Pion(Pion.Couleur.NOIR));
             }
-        });
-        for (int i = 0; i < 40; i++) {
-            pions
+            if (i > 20 && i <= 30) {
+                ajouterPion(i, null);
+            }
+            if (i > 30) {
+                ajouterPion(i, new Pion());
+            }
         }
     }
 }
