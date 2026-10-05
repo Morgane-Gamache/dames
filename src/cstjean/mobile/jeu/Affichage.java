@@ -8,45 +8,45 @@ package cstjean.mobile.jeu;
 public class Affichage {
 
     /**
-     * Cree une string du plateau de dames et pions
+     * Crée un string du plateau de dames et pions.
      *
      * @param damier Est un damier contenant les pions.
      *
-     * @return plateau Retourne la string.
+     * @return plateau Retourne le string.
      *
      */
 
     public String creerAffichage(Damier damier) {
         char tiret = '-';
-        String plateau = "";
+        StringBuilder plateau = new StringBuilder();
         int position = 1;
 
         for (int ligne = 0; ligne < 10; ligne++) {
 
             for (int colonne = 0; colonne < 10; colonne++) {
                 if ((ligne + colonne) % 2 == 0) {
-                    plateau += tiret;
+                    plateau.append(tiret);
                 } else {
                     if (damier.getPion(position) == null) {
-                        plateau += tiret;
+                        plateau.append(tiret);
                     } else {
-                        plateau += damier.getPion(position).getRepresentation();
+                        plateau.append(damier.getPion(position).getRepresentation());
                     }
 
                     position++;
                 }
             }
 
-            plateau += "\n";
+            plateau.append("\n");
         }
 
-        return plateau;
+        return plateau.toString();
     }
 
     /**
      * Affiche le plateau de dames et pions.
      *
-     * @param plateau Est une string contenant des pions.
+     * @param plateau Est un string contenant des pions.
      *
      */
 

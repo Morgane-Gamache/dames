@@ -1,6 +1,5 @@
 package cstjean.mobile.jeu;
 
-import com.sun.source.tree.Tree;
 import java.util.TreeMap;
 
 /**
@@ -14,15 +13,12 @@ public class Damier {
     /**  Le nombre de cases du damier.*/
     private static final int NB_CASES = 50;
 
-    /**  Liste contenant les pions qui sont sur le damier.*/
+    /**  Map contenant les pions qui sont sur le damier.*/
     private final TreeMap<Integer, Pion> pions;
 
-    /**  Crée un damier avec une liste de 50 positions vides (null).*/
+    /**  Crée un damier vide.*/
     public Damier() {
         this.pions = new TreeMap<>();
-        //for (int i = 0; i < NB_CASES; i++) {
-          //  pions.put(null, null);
-        //}
     }
 
     /**
@@ -32,7 +28,6 @@ public class Damier {
      * @param pion Le pion que l'on veut placer sur le damier.
      */
     public void ajouterPion(int index, Pion pion) {
-        //index--;
         pions.put(index, pion);
     }
 
@@ -43,7 +38,6 @@ public class Damier {
      * @return Le pion ou null.
      */
     public Pion getPion(int index) {
-        //index--;
         return pions.get(index);
     }
 
@@ -67,7 +61,7 @@ public class Damier {
      */
 
     public void initialiser() {
-        for (int i = 1; i <= 50; i++) {
+        for (int i = 1; i <= NB_CASES; i++) {
             if (i <= 20) {
                 ajouterPion(i, new Pion(Pion.Couleur.NOIR));
             }

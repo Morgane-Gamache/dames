@@ -7,20 +7,29 @@ package cstjean.mobile.jeu;
  */
 
 public class Pion {
-    /**  La couleur du pion.*/
+    /**
+     * La couleur du pion.
+     */
     public enum Couleur {
-        /** La couleur du pion blanc.*/
+        /**
+         * La couleur du pion blanc.
+         */
         BLANC,
-        /** La couleur du pion noir.*/
+        /**
+         * La couleur du pion noir.
+         */
         NOIR
     }
 
     /**
      * La couleur du pion.
-     * */
+     *
+     */
     private final Couleur couleur;
 
-    /**  Crée un pion ayant une couleur blanche comme couleur par défaut.*/
+    /**
+     * Crée un pion ayant une couleur blanche comme couleur par défaut.
+     */
     public Pion() {
         this(Couleur.BLANC);
     }
@@ -44,15 +53,26 @@ public class Pion {
     }
 
     /**
-     * Récupère la représentation du pion.
+     * Obtient la lettre de la pièce.
      *
-     * @return La représentation du pion.
+     * @return La lettre de la pièce.
+     */
+
+    protected char getLettre() {
+        return 'p';
+    }
+
+    /**
+     * Obtient la lettre de la pièce selon la couleur.
+     * Minuscule si blanc, majuscule sinon.
+     *
+     * @return La lettre de la pièce.
      */
     public Character getRepresentation() {
-        if (couleur == Couleur.BLANC) {
-            return 'p';
+        if (getCouleur() == Couleur.BLANC) {
+            return getLettre();
         } else {
-            return 'P';
+            return Character.toUpperCase(getLettre());
         }
     }
 }

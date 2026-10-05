@@ -1,4 +1,4 @@
 # dames
 
-Exercice 2 - Développement mobile 420-3C4
+Exercice 3 - Développement mobile 420-3C4
 Morgane Gamache, Ian LeBlanc
