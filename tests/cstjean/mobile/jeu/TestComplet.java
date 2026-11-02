@@ -19,6 +19,9 @@ public class TestComplet {
         suite.addTestSuite(TestDamier.class);
         suite.addTestSuite(TestAffichage.class);
         suite.addTestSuite(TestDame.class);
+        suite.addTestSuite(TestJoueur.class);
+        suite.addTestSuite(TestDeplacement.class);
+        suite.addTestSuite(TestPartie.class);
         return suite;
     }
 }

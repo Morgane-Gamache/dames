@@ -7,38 +7,31 @@ package cstjean.mobile.jeu;
  */
 public class Joueur {
     /**
-     * La couleur du joueur.
-     */
-    public enum Couleur {
-        /**
-         * La couleur du joueur blanc.
-         */
-        BLANC,
-        /**
-         * La couleur du joueur noir.
-         */
-        NOIR
-    }
-
-    /**
-     * La couleur du pion.
+     * La couleur des pions du joueur.
      *
      */
-    private final Couleur couleur;
+    private final Pion.Couleur couleur;
+    /**
+     * Le nom du joueur.
+     */
     private final String nom;
 
-    public Joueur(Couleur couleur, String nom) {
+    /**
+     * Le constructeur de la classe Joueur.
+     *
+     * @param couleur La couleur des pions du joueur.
+     * @param nom     Le nom du joueur.
+     */
+    public Joueur(Pion.Couleur couleur, String nom) {
         this.couleur = couleur;
         this.nom = nom;
     }
 
-    public Couleur getCouleur() {
+    public Pion.Couleur getCouleur() {
         return couleur;
     }
 
     public String getNom() {
         return nom;
     }
-
-
 }
